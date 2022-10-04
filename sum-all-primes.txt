@@ -1,0 +1,29 @@
+function sumPrimes(num) {
+  let soma = 0;
+  let primo = 0;
+  if (num == 1) {
+    soma = 1;
+  }
+  else if (num == 2) {
+    soma = 3;
+  }
+  else {
+    soma = 2;
+     for (let j=3; j<=num; j++) {
+      for (let i=2; i<j; i++) {
+        if (j%i == 0) {
+          primo = 1;
+          i = j;
+        }
+      }
+      if (primo == 0) {
+        soma +=j;
+      }
+      primo = 0;
+    }
+
+  }
+  return soma;
+}
+
+sumPrimes(977);

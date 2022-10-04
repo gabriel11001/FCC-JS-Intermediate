@@ -1,0 +1,16 @@
+function sumFibs(num) {
+  let numAnterior = 0;
+  let numAtual = 1;
+  let resultado = 0;
+  while (numAtual <= num) {
+    if (numAtual % 2 !== 0) {
+      resultado += numAtual;
+    }
+    numAtual += numAnterior;
+    numAnterior = numAtual - numAnterior;
+  }
+
+  return resultado;
+}
+
+sumFibs(4);

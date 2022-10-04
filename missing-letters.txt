@@ -1,0 +1,11 @@
+function fearNotLetter(str) {
+  let palavra;
+  for (let j = 1; j < str.length; ++j) {
+    if (str.charCodeAt(j) - str.charCodeAt(j - 1) > 1) {
+      palavra = String.fromCharCode(str.charCodeAt(j - 1) + 1);
+      return palavra;
+    }
+  }
+}
+
+fearNotLetter("abce");
